@@ -3,7 +3,7 @@ import Cardimg from '../assets/iphone14pro.png';
 
 const Card = () => {
     return (
-        <>
+        <React.Fragment>
             <div className="productCard w-[304px] rounded-lg bg-gradient-to-tr from-blue-300 to-green-500 p-0.5 shadow-lg">
                 <div className="productInner w-[300px] bg-[#F2FBFF] p-5 rounded-md text-center">
                     <div className="productImage flex justify-center">
@@ -15,7 +15,7 @@ const Card = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </React.Fragment>
     );
 };
 

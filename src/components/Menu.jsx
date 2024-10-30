@@ -17,58 +17,60 @@ export default function BasicMenu() {
   };
 
   return (
-    <div>
-      <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        <RxHamburgerMenu
-          className='text-black text-[30px]'
-        />
-      </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem
-          onClick={handleClose}
+    <React.Fragment>
+      <div>
+        <Button
+          id="basic-button"
+          aria-controls={open ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
         >
-          Home
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
+          <RxHamburgerMenu
+            className='text-black text-[30px]'
+          />
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
         >
-          About Us
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-        >
-          Wholesale
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-        >
-          Service
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-        >
-          News
-        </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-        >
-          How it Works
-        </MenuItem>
-      </Menu>
-    </div>
+          <MenuItem
+            onClick={handleClose}
+          >
+            Home
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+          >
+            About Us
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+          >
+            Wholesale
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+          >
+            Service
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+          >
+            News
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+          >
+            How it Works
+          </MenuItem>
+        </Menu>
+      </div>
+    </React.Fragment>
   );
 }
