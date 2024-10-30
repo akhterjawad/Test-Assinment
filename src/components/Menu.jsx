@@ -7,9 +7,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -23,7 +25,9 @@ export default function BasicMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <RxHamburgerMenu className='text-black text-[30px] '/>
+        <RxHamburgerMenu
+          className='text-black text-[30px]'
+        />
       </Button>
       <Menu
         id="basic-menu"
@@ -34,12 +38,36 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}>About Us</MenuItem>
-        <MenuItem onClick={handleClose}>Wholesale</MenuItem>
-        <MenuItem onClick={handleClose}>Service</MenuItem>
-        <MenuItem onClick={handleClose}>News</MenuItem>
-        <MenuItem onClick={handleClose}>How it Works</MenuItem>
+        <MenuItem
+          onClick={handleClose}
+        >
+          Home
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+        >
+          About Us
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+        >
+          Wholesale
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+        >
+          Service
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+        >
+          News
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+        >
+          How it Works
+        </MenuItem>
       </Menu>
     </div>
   );
