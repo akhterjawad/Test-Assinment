@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './pages/Hero'
 import MobileStock from './pages/MobileStock'
+import Hero from './pages/Hero'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <React.Fragment>
-      <div className='sm:flex hidden'>
+      <div className='hidden sm:flex'>
       <Navbar />
       </div>
       <Hero />
