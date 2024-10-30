@@ -5,13 +5,13 @@ import MobileStock from './pages/MobileStock'
 
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <div className='sm:flex hidden'>
       <Navbar />
       </div>
       <Hero />
       <MobileStock />
-    </div>
+    </React.Fragment>
   )
 }
 
